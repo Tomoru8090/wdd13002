@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F&Q</title>
+  <style>
+    .faq-item { margin-bottom: 10px; }
+    .question { font-weight: bold; cursor: pointer; }
+    .answer { display: none; margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Frequently question</h1>
+  
+  <div class="faq-item">
+    <div class="question">Q1: このサービスは無料ですか？</div>
+    <div class="answer">はい、基本機能は無料でご利用いただけます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="question">Q2: サポートはどのように受けられますか？</div>
+    <div class="answer">お問い合わせフォームからご連絡ください。</div>
+  </div>
+
+  <script>
+    const questions = document.querySelectorAll('.question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>
